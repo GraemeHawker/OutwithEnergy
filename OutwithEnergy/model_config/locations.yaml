@@ -1,0 +1,90 @@
+##
+# LOCATIONS
+##
+
+locations:
+
+    windyhill: # WIYH 400/275/132/33
+        coordinates: {lon: -4.380582, lat: 55.880388}
+
+    drumchapel: # DRUM 275/33
+        coordinates: {lon: -4.34831, lat: 55.915036}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand-1.csv:demand
+            ccgt:
+                constraints:
+                    energy_cap_max: 30000 # increased to ensure no unmet_demand in first timestep
+
+    killermont: # KIER 132/33
+        coordinates: {lon: -4.309858, lat: 55.90349}
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=demand-2.csv:demand
+
+    port_dundas: # PORD 275/33
+        coordinates: {lon: -4.254658, lat: 55.873466}
+
+    partick: # PART 132/33
+        coordinates: {lon: -4.315351, lat: 55.870373}
+
+    finnieston: # FINN 132/33
+        coordinates: {lon: -4.285825, lat: 55.863052}
+
+    west_george_st: # WGEO 275/33
+        coordinates: {lon: -4.265226, lat: 55.863245}
+
+    govan: # GOVA 132/33
+        coordinates: {lon: -4.315351, lat: 55.854574}
+
+    devol_moor: # DEVM 400/132/33/25
+        coordinates: {lon: -3.780206, lat: 56.138342}
+
+    haggs_road: # HAGR 132/33
+        coordinates: {lon: -4.296125, lat: 55.829514}
+
+    strathaven: # STHA 400/275/33
+        coordinates: {lon: -4.077428, lat: 55.753658}
+
+    st_andrews_cross: # SANX 132/33/25
+        coordinates: {lon: -4.259733, lat: 55.844166}
+
+    easterhouse: # EERH 275/33
+        coordinates: {lon: -4.075368, lat: 55.879425}
+
+    charlotte_st: # CHAS 275/33
+        coordinates: {lon: -4.23982, lat: 55.855345}
+
+    carntyne: # CATY 132/33/25
+        coordinates: {lon: -4.197248, lat: 55.857464}
+
+    dalmarnock: # DALM 275/132/33
+        coordinates: {lon: -4.204458, lat: 55.835299}
+
+    westburn: # CLYM? 275/33
+        coordinates: {lon: -4.1495026, lat: 55.8228579}
+
+
+##
+# TRANSMISSION CAPACITIES
+##
+
+links:
+    # links-start
+    windyhill,partick:
+        techs:
+            ac_transmission:
+                constraints:
+                    energy_cap_max: 10000
+    partick,finnieston:
+        techs:
+            free_transmission:
+    partick,killermont:
+        techs:
+            free_transmission:
+    partick,west_george_st:
+        techs:
+            free_transmission:
+    # links-end
