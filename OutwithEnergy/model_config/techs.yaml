@@ -126,4 +126,64 @@ techs:
         costs:
             monetary:
                 om_prod: 0
+                
+    transmission_400:
+        essentials:
+            name: '400kV transmission'
+            color: '#8465A9'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 200
+                om_prod: 0.002
+                
+    transmission_275:
+        essentials:
+            name: '275kV transmission'
+            color: '#8465A9'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 200
+                om_prod: 0.002
+                
+    transmission_132:
+        essentials:
+            name: '275kV transmission'
+            color: '#8465A9'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 200
+                om_prod: 0.002
+                
+    transmission_33:
+        essentials:
+            name: '275kV transmission'
+            color: '#8465A9'
+            parent: transmission
+            carrier: power
+        constraints:
+            energy_eff: 0.85
+            lifetime: 25
+        costs:
+            monetary:
+                interest_rate: 0.10
+                energy_cap: 200
+                om_prod: 0.002
     # transmission-end
